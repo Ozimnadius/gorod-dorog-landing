@@ -1,0 +1,60 @@
+.color{
+  &-red{
+    color: $btn;
+  }
+}
+
+.btn{
+  width: 237px;
+  height: 60px;
+  border-radius: 100px;
+  background-color: $btn;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: $bg;
+  font-size: 16px;
+  font-weight: 500;
+  border: 1px solid $btn;
+  @include tr;
+
+  &:hover{
+    background-color: transparent;
+    color: $btn;
+  }
+
+  &--orange{
+    background-color: #f0ae00;
+    color: $txt;
+    border: 1px solid #f0ae00;
+
+    &:hover{
+      color: #f0ae00;
+    }
+  }
+}
+
+.btn2{
+  width: 332px;
+  height: 60px;
+  border-radius: 100px;
+  border: 1px solid $txt;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  color: $txt;
+  font-size: 16px;
+  font-weight: 500;
+  @include tr;
+
+  &:hover{
+    background-color: $txt;
+    color: $bg;
+  }
+}

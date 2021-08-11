@@ -1,0 +1,185 @@
+.lsteps {
+  padding: 160px 0;
+
+  &__banner {
+    background: url("/images/content/steps/bg.png") center center no-repeat;
+    background-size: cover;
+    padding: 65px 70px;
+    position: relative;
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    font-size: 48px;
+  }
+
+  &__img {
+    position: absolute;
+    bottom: 0;
+    right: -33px;
+
+    img {
+      display: block;
+    }
+  }
+
+  &__wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__road {
+    position: relative;
+  }
+
+  &__car{
+    position: absolute;
+    top: 20px;
+    left: 235px;
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    //justify-content: space-between;
+    margin-bottom: -60px;
+    counter-reset: item;
+    margin-left: -35px;
+    margin-right: -35px;
+    position: relative;
+    @media (max-width: 1199.98px){
+      width: 930px;
+    }
+  }
+
+  &__item {
+    margin-bottom: 60px;
+    margin-left: 35px;
+    margin-right: 35px;
+  }
+}
+
+.lstep {
+  width: 240px;
+  height: 200px;
+  box-shadow: 4px 4px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 10px;
+  background-color: $bg;
+  background-size: cover;
+  background-position: center center;
+  overflow: hidden;
+  padding: 20px 25px 15px 25px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+
+  &:nth-child(7) {
+    justify-content: flex-end;
+  }
+
+  &:nth-child(9), &:nth-child(10) {
+    border-radius: 20px;
+    width: 553px;
+    justify-content: center;
+
+    grid-column: 2;
+
+    .lstep {
+      &__title {
+        &:before {
+          position: absolute;
+          top: 25px;
+          left: 30px;
+          font-size: 72px;
+        }
+      }
+    }
+  }
+
+  &:nth-child(9) {
+    padding-left: 45px;
+
+    .lstep {
+      &__title {
+        &:before {
+          left: initial;
+          right: 12px;
+        }
+      }
+    }
+  }
+
+  &:nth-child(10) {
+    padding-left: 130px;
+  }
+
+
+  &__title {
+    color: rgba($txt, .8);
+    font-size: 14px;
+    font-weight: 500;
+
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+
+    &:before {
+      counter-increment: item;
+      content: counter(item);
+      color: #c9c9c9;
+      font-size: 50px;
+      font-weight: 700;
+      margin-right: 15px;
+      line-height: 1;
+    }
+  }
+
+  &__btn {
+    width: 177px;
+    height: 46px;
+    border-radius: 100px;
+    background-image: linear-gradient(98.32deg, #ff1e48 0%, #ffd809 100%);
+
+    color: $bg;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 55px;
+    @include tr;
+
+    &:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: 3px 3px 5px 0px rgba(50, 50, 50, 0.15);
+    }
+  }
+
+  &__question {
+    font-size: 12px;
+    font-weight: 500;
+    margin-bottom: 3px;
+    text-align: center;
+  }
+
+  &__answer {
+    font-size: 12px;
+    font-weight: 500;
+    font-style: normal;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+
+    &-val {
+      margin-right: 18px;
+
+      &:last-child {
+        margin-right: 0
+      }
+    }
+  }
+}

@@ -1,0 +1,66 @@
+.lheader {
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding: 40px 115px 0;
+
+  &__left{
+    margin-right: auto;
+  }
+
+  &__center{
+    margin-right: 75px;
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-gap: 70px;
+  }
+
+  &__btn{
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+    color: $txt;
+    font-size: 14px;
+    font-weight: 600;
+    @include tr;
+
+    &:hover{
+      color: $btn;
+
+      svg{
+        transform: translateX(5px);
+      }
+    }
+
+    svg{
+      flex-shrink: 0;
+      margin-right: 20px;
+      @include tr;
+    }
+  }
+
+  &__tel{
+    width: 242px;
+    height: 60px;
+    border-radius: 100px;
+    border: 1px dashed $txt;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    font-size: 18px;
+    font-weight: 700;
+    @include tr;
+
+    &:hover{
+      color: $bg;
+      background-color: $txt;
+    }
+  }
+}

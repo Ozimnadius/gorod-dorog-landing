@@ -1,0 +1,401 @@
+extends ../main
+
+block variables
+    - var title = 'Главная'
+
+block content
+    main.landing__main
+        //- banner
+        section.landing__banner
+            .lbanner
+                .lbanner__socials
+                    .lsocials
+                        .lsocials__list
+                            a(href="#").lsocials__item
+                                <svg width="24" height="25" viewBox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M0 6.625C0 3.31129 2.68629 0.625 6 0.625H18C21.3137 0.625 24 3.31129 24 6.625V18.625C24 21.9387 21.3137 24.625 18 24.625H6C2.68629 24.625 0 21.9387 0 18.625V6.625ZM11.9999 16.2867C14.0224 16.2867 15.6619 14.6471 15.6619 12.6247C15.6619 10.6022 14.0224 8.96267 11.9999 8.96267C9.97748 8.96267 8.33795 10.6022 8.33795 12.6247C8.33795 14.6471 9.97748 16.2867 11.9999 16.2867ZM11.9999 19.2867C15.6793 19.2867 18.6619 16.304 18.6619 12.6247C18.6619 8.94534 15.6793 5.96267 11.9999 5.96267C8.32063 5.96267 5.33795 8.94534 5.33795 12.6247C5.33795 16.304 8.32063 19.2867 11.9999 19.2867ZM20.0013 6.6584C20.8201 6.6584 21.4838 5.99469 21.4838 5.17595C21.4838 4.35722 20.8201 3.69351 20.0013 3.69351C19.1826 3.69351 18.5189 4.35722 18.5189 5.17595C18.5189 5.99469 19.1826 6.6584 20.0013 6.6584Z" fill="#161A26"/>
+                                </svg>
+                            a(href="#").lsocials__item
+                                <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.5122 3.69764C19.1415 1.33514 15.9805 0.022644 12.6439 0.022644C5.70731 0.022644 0.0878035 5.62264 0.0878035 12.5351C0.0878035 14.7226 0.702439 16.9101 1.7561 18.7476L0 25.2226L6.67317 23.4726C8.51708 24.4351 10.5366 24.9601 12.6439 24.9601C19.5805 24.9601 25.2 19.3601 25.2 12.4476C25.1122 9.21014 23.8829 6.06014 21.5122 3.69764ZM18.7024 16.9976C18.439 17.6976 17.2098 18.3976 16.5951 18.4851C16.0683 18.5726 15.3659 18.5726 14.6634 18.3976C14.2244 18.2226 13.6098 18.0476 12.9073 17.6976C9.74634 16.3851 7.72683 13.2351 7.55122 12.9726C7.37561 12.7976 6.23415 11.3101 6.23415 9.73514C6.23415 8.16014 7.02439 7.46014 7.2878 7.11014C7.55122 6.76014 7.90244 6.76014 8.16585 6.76014C8.34146 6.76014 8.60487 6.76014 8.78048 6.76014C8.95609 6.76014 9.21951 6.67264 9.48293 7.28514C9.74634 7.89764 10.361 9.47264 10.4488 9.56014C10.5366 9.73514 10.5366 9.91014 10.4488 10.0851C10.361 10.2601 10.2732 10.4351 10.0976 10.6101C9.92195 10.7851 9.74634 11.0476 9.65853 11.1351C9.48292 11.3101 9.30732 11.4851 9.48293 11.7476C9.65854 12.0976 10.2732 13.0601 11.239 13.9351C12.4683 14.9851 13.4341 15.3351 13.7854 15.5101C14.1366 15.6851 14.3122 15.5976 14.4878 15.4226C14.6634 15.2476 15.2781 14.5476 15.4537 14.1976C15.6293 13.8476 15.8927 13.9351 16.1561 14.0226C16.4195 14.1101 18 14.8976 18.2634 15.0726C18.6146 15.2476 18.7902 15.3351 18.878 15.4226C18.9659 15.6851 18.9659 16.2976 18.7024 16.9976Z" fill="#161A26"/>
+                                </svg>
+                            a(href="#").lsocials__item
+                                <svg width="26" height="16" viewBox="0 0 26 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.7585 13.8792C25.7585 13.7765 25.655 13.7765 25.655 13.6737C25.2413 12.8518 24.3102 11.8244 23.0689 10.6943C22.4482 10.1806 22.1378 9.7696 21.9309 9.56412C21.6206 9.15316 21.6206 8.84495 21.724 8.43399C21.8275 8.12578 22.2413 7.61206 22.9654 6.68741C23.3792 6.17371 23.5861 5.8655 23.8964 5.55728C25.4481 3.50248 26.1723 2.16686 25.9654 1.55042L25.862 1.44769C25.7585 1.34495 25.655 1.24221 25.4481 1.24221C25.2412 1.13947 24.9309 1.13947 24.6206 1.24221H20.6896C20.5861 1.24221 20.5861 1.24221 20.3792 1.24221C20.2758 1.24221 20.1723 1.24221 20.1723 1.24221H20.0689H19.9654L19.862 1.34494C19.7585 1.44768 19.7585 1.44768 19.7585 1.55042C19.3447 2.68055 18.8275 3.60521 18.3102 4.63261C17.9999 5.14631 17.6896 5.66002 17.3792 6.07098C17.0689 6.48194 16.862 6.79015 16.6551 6.99563C16.4482 7.20111 16.2413 7.30385 16.1378 7.50933C16.0344 7.61207 15.8275 7.71481 15.8275 7.61207C15.7241 7.61207 15.6206 7.61207 15.6206 7.50933C15.5172 7.40659 15.4137 7.30384 15.3103 7.2011C15.2068 7.09836 15.2068 6.89289 15.1034 6.68741C15.1034 6.48193 15.1034 6.27645 15.1034 6.17371C15.1034 6.07097 15.1034 5.76276 15.1034 5.55728C15.1034 5.24906 15.1034 5.04357 15.1034 4.94083C15.1034 4.63261 15.1034 4.22166 15.1034 3.8107C15.1034 3.39974 15.1034 3.09152 15.1034 2.88604C15.1034 2.68056 15.1034 2.37234 15.1034 2.16686C15.1034 1.85864 15.1034 1.65316 15.1034 1.55042C15.1034 1.44768 14.9999 1.2422 14.9999 1.13946C14.8965 1.03672 14.793 0.933981 14.6896 0.831241C14.5861 0.728501 14.3792 0.728504 14.2758 0.625765C13.7586 0.523025 13.1379 0.420288 12.4137 0.420288C10.7586 0.420288 9.62065 0.523031 9.20686 0.728511C8.99996 0.83125 8.79307 0.933984 8.68962 1.13946C8.48273 1.34494 8.48272 1.44769 8.58617 1.44769C9.1034 1.55043 9.5172 1.7559 9.7241 2.06412L9.82755 2.26961C9.931 2.37235 9.93098 2.57782 10.0344 2.88604C10.1379 3.19426 10.1379 3.50248 10.1379 3.91343C10.1379 4.52987 10.1379 5.14632 10.1379 5.55728C10.1379 6.07098 10.0344 6.37919 10.0344 6.68741C10.0344 6.99563 9.931 7.20111 9.82755 7.30385C9.7241 7.50933 9.72409 7.61207 9.62064 7.61207C9.62064 7.61207 9.62064 7.7148 9.51719 7.7148C9.41374 7.7148 9.3103 7.81755 9.1034 7.81755C8.99996 7.81755 8.79307 7.71481 8.68962 7.61207C8.48273 7.50933 8.27583 7.30385 8.17238 7.09837C7.96549 6.89289 7.75858 6.58467 7.55169 6.17371C7.34479 5.76275 7.03444 5.35179 6.82754 4.73536L6.62067 4.3244C6.51722 4.11892 6.31032 3.70796 6.10343 3.19426C5.89653 2.68056 5.68963 2.26961 5.48273 1.75591C5.37929 1.55043 5.27585 1.44768 5.1724 1.34494H5.06895C5.06895 1.34494 4.96549 1.24221 4.86204 1.24221C4.75859 1.24221 4.65516 1.13946 4.55171 1.13946H0.827585C0.413794 1.13946 0.206902 1.2422 0.103454 1.34494L0 1.44769C0 1.44769 0 1.55042 0 1.65316C0 1.7559 6.31241e-06 1.85864 0.103454 2.06412C0.620693 3.29699 1.24138 4.52988 1.86206 5.76275C2.48275 6.89289 3.10344 7.92029 3.51723 8.63947C4.03447 9.35865 4.44826 10.0778 4.9655 10.6943C5.48273 11.3107 5.79307 11.7217 5.89652 11.9271C6.10341 12.1326 6.20686 12.2354 6.3103 12.3381L6.62067 12.6463C6.82756 12.8518 7.1379 13.16 7.55169 13.4682C7.96548 13.7765 8.48271 14.0847 8.99995 14.3929C9.51719 14.7011 10.1379 14.9066 10.7586 15.1121C11.4827 15.3176 12.1034 15.4203 12.7241 15.3176H14.2758C14.5861 15.3176 14.793 15.2148 14.9999 15.0093L15.1034 14.9066C15.1034 14.8038 15.2068 14.8039 15.2068 14.7011C15.2068 14.5984 15.2068 14.4956 15.2068 14.2902C15.2068 13.8792 15.2068 13.571 15.3103 13.2628C15.4137 12.9545 15.4137 12.7491 15.5172 12.5436C15.6206 12.3381 15.7241 12.2354 15.8275 12.1326C15.931 12.0299 16.0344 11.9271 16.0344 11.9271H16.1378C16.3447 11.8244 16.6551 11.9271 16.862 12.1326C17.1723 12.3381 17.4827 12.6463 17.6896 12.9545C17.8965 13.2628 18.2068 13.571 18.6206 13.9819C19.0344 14.3929 19.3447 14.7011 19.5516 14.8039L19.862 15.0093C20.0689 15.1121 20.2758 15.2148 20.5861 15.3176C20.8965 15.4203 21.1033 15.4203 21.3102 15.4203L24.8275 15.3176C25.1378 15.3176 25.4481 15.2148 25.655 15.1121C25.8619 15.0093 25.9654 14.9066 25.9654 14.7011C25.9654 14.5984 25.9654 14.3929 25.9654 14.2902C25.7585 14.0847 25.7585 13.9819 25.7585 13.8792Z" fill="#161A26"/>
+                                </svg>
+                        .lsocials__sep
+                        .lsocials__name Мы в соц. сетях
+                .container
+                    .lbanner__grid
+                        .lbanner__left
+                            h2.lbanner__title
+                                | Изучите теорию онлайн&nbsp;
+                                span.color-red за 11 уроков
+                            .lbanner__sub и получите права уже этим летом!
+                            ul.lbanner__ul
+                                each i in ["Самые понятные лекции с возможностью задавать вопросы преподавателю 24/7","Вождение с инструктором в вашем районе"]
+                                    li.lbanner__li= i
+                            .lbanner__bottom
+                                button(type='button').lbanner__call.btn Оставить заявку
+                                button(type='button').lbanner__consult.btn2 Получить консультацию
+
+                        .lbanner__right
+                            .lbanner__img
+                                picture
+                                    source(srcset='images/content/banner/img.png' type='image/jpeg' media='(min-width:1200px)')
+                                    source(srcset='images/content/banner/img-t.png' type='image/jpeg' media='(min-width:768px)')
+                                    source(srcset='images/content/banner/img-m.png' type='image/jpeg' media='(min-width:320px)')
+                                    img(src='images/content/banner/img.png' alt='lorem1')
+
+            a(href="mailto:INFO@GORODDOROG-AVTO.RU").lbanner__mail INFO@GORODDOROG-AVTO.RU
+        //- welcome
+        section.landing__welcome
+            .lwelcome
+                .container
+                    .lwelcome__top
+                        .lwelcome__top-left
+                            h2.lwelcome__title.lwelcome__title--small
+                                | Добро пожаловать в Онлайн Автошколу
+                                br
+                                span.color-red Город - Дорог
+                        .lwelcome__top-right
+                            .lwelcome__note В нашей автошколе у вас есть возможность пройти теорию вождения онлайн, а так же вы можете участвовать на вебинарах и получать уроки напрямую от наших преподавателей
+
+                    .lwelcome__video
+                        a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox).lwvideo
+                            picture.lwvideo__img
+                                source(srcset='images/content/welcome/img.png' type='image/jpeg' media='(min-width:1200px)')
+                                source(srcset='images/content/welcome/img-t.png' type='image/jpeg' media='(min-width:768px)')
+                                source(srcset='images/content/welcome/img-m.png' type='image/jpeg' media='(min-width:320px)')
+                                img(src='images/content/welcome/img.png' alt='lorem1').ipromo__img-img
+
+                            button(type='button').lwvideo__btn
+                                <svg width="132" height="132" viewBox="0 0 132 132" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <circle opacity="0.15" cx="66" cy="66" r="66" fill="white"/>
+                                <circle opacity="0.15" cx="66" cy="66" r="58.75" fill="white"/>
+                                <circle opacity="0.15" cx="66" cy="66" r="50" fill="white"/>
+                                <circle cx="66" cy="66" r="40" fill="#CC002D"/>
+                                <path d="M82.25 66L57.875 80.0729L57.875 51.9271L82.25 66Z" fill="white"/>
+                                </svg>
+                                | Смотреть видео
+                                br
+                                | презентацию
+                    .lwelcome__row
+                        .lwelcome__bottom
+                            h2.lwelcome__title
+                                | Почему выбирают
+                                br
+                                | Город - Дорог
+                                span.color-red онлайн
+                            ul.lwelcome__ul
+                                li.lwelcome__li
+                                    .lwelcome__li-name
+                                        | Удобное
+                                        br
+                                        span.color-red время
+                                    .lwelcome__li-txt Обучение в любое удобное время: нужен только смартфон или ноутбук.
+                                li.lwelcome__li
+                                    .lwelcome__li-name
+                                        | Опытные
+                                        br
+                                        span.color-red инструкторы
+                                    .lwelcome__li-txt Вас будут обучать опытные инструкторы с большим стажем вождения.
+                                li.lwelcome__li
+                                    .lwelcome__li-name
+                                        span.color-red 100%&nbsp;
+                                        | сдача
+                                        br
+                                        | экзамена
+                                    .lwelcome__li-txt Мы гарантируем высокое качество обучения и успешную сдачу экзамена в ГИБДД
+                            .lwelcome__cols
+                                .lwelcome__col
+                                    h4.lwelcome__sub Видеокурсы
+                                    .lwelcome__content
+                                        p Доступно совмещение посещения классической автошколы с изучением теоретической части по сети. Теория прослушивается онлайн прямо из дома. Это очень удобно и существенно экономит время.
+                                        p По практической части не менее удобно – учащийся вправе выбрать площадку, наиболее приближенную к дому или работе.
+                                        p Вы можете смотреть видео уроки в любое время, когда вам будет удобно
+                                .lwelcome__col
+                                    h4.lwelcome__sub
+                                        | Вебинары&nbsp;
+                                        span.color-red онлайн
+                                    .lwelcome__content
+                                        p Живое общение с лектором, абосолютный аналог лекций в классе, человек задает вопросы, поднимает руку, специальная платформа где можно задать вопрос, поднять руку, пройти зачет, лектор дает зачет, они отвечают, в режиме реального времени.
+                                        p Достаточно выбрать время занятий и оставить заявку на участие в вебинаре.
+                                    .lwelcome__note.lwelcome__note--up Запись вебинаров остается доступной в течении месяца в личном кабинете
+        //- online
+        section.landing__online
+            .lonline
+                .container
+                    .lonline__row
+                        .lonline__left
+                            h2.lonline__title
+                                | Школа &nbsp;
+                                span.color-red у вас дома, &nbsp;
+                                | удобства обучения:
+                            ul.lonline__ul
+                                each i in ['Возможность повторного просмотра занятий.','Эффективнее обучаться в домашней обстановке.','Интернет-обучение в любой точке мира.','Экономия ваших средств, скидки до 60%.','Общение с преподавателем в реальном времени.']
+                                    li.lonline__li= i
+                            button(type='button').lonline__btn.btn Оставить заявку
+                        .lonline__right
+                            .lonline__img
+                                +image('images/content/online/img.jpg')
+                    .lonline__row
+                        .lonline__left.lonline__left--car
+                            .lonline__anim
+                                .lonline__car
+                                    +image('images/content/online/car.png')
+                                .lonline__rounds
+                                    +image('images/content/online/rounds.png')
+                        .lonline__right
+                            h3.lonline__sub
+                                | Программа онлайн
+                                br
+                                | видеокурсов
+                            .lonline__list
+                                each i in ['Раздел 1. Общие положения','Раздел 2. Обязанности водителя','Раздел 3. Применение специальных сигналов','Раздел 4. Обязанности пешехода','Раздел 5. Обязанности пассажира','Раздел 6. Сигналы светофора и регулировщика','Раздел 7. Применении аварийной сигнализации и знака аварийной остановки']
+                                    a(href="#").lonline__item= i
+                            a(href="#").lonline__link
+                                span Смотреть весь список
+                                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9.61523 22.3848L22.5 9.5" stroke="#CC002D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                <path d="M9.5 9.5H22.5V22.5" stroke="#CC002D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+        // -boost
+        section.landing__boost
+            .lboost
+                .container
+                    .lboost__row
+                        .lboost__left
+                            .lboost__img
+                                +image('images/content/boost/img.png')
+                        .lboost__right
+                            h2.lboost__title
+                                | Ускорьте своё обучение с помощью&nbsp;
+                                br
+                                span.color-red вебинаров
+                            .lboost__txt Ускорьте свое обучение участвуя на вебинарах. Живое общение с профессиональными инструкторами поможет вам лучше и быстрее понять теорию и сдать экзамены на отлично
+                            button(type='button').lboost__btn.btn Ускорить обучение
+                    .lboost__items
+                        each i in boostList
+                            .lboost__item.lbitem
+                                .lbitem__top
+                                    .lbitem__img
+                                        +image(i.img)
+                                    .lbitem__title= i.title
+                                .lbitem__bottom
+                                    .lbitem__txt= i.txt
+
+                    .lboost__cols
+                        .lboost__col
+                            .lboost__content
+                                p Благодаря формату видеовстреч можно в режиме реального времени слушать тренера, общаться с известными экспертами или обсуждать важные вопросы с коллегами. При этом вы никого не вынуждаете покидать свой дом, тратить время на дорогу и везти весь необходимый инвентарь.
+                        .lboost__col
+                            .lboost__content
+                                p Во время трансляции каждый участник может находиться на своем рабочем месте, делать скриншоты, вести запись экрана и помечать те моменты, к которым он хотел бы вернуться. Не нужно стараться успевать записывать речь эксперта в тетради на коленке, как это происходит обычно. Как правило, после вебинара слушатели получают на почту все необходимые файлы с материалом.
+        //- steps
+        section.landing__steps
+            .lsteps
+                .container
+                    .lsteps__banner
+                        h2.lsteps__title
+                            span.color-red 10 шагов
+                            br
+                            | до водительского
+                            br
+                            | удостоверения
+                        .lsteps__img
+                            +image('images/content/steps/img.png')
+                    .lsteps__wrap
+                        .lsteps__road
+                            .lsteps__car
+                                +image('images/content/steps/car.png')
+                            .lsteps__items
+                                .lsteps__item.lstep
+                                    .lstep__title
+                                        | Оставьте заявку
+                                        br
+                                        | на сайте
+                                    button(type='button').lstep__btn Оставить заявку
+                                div(style="background-image:url(images/content/steps/items/bg2.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Заключить
+                                        br
+                                        | договор онлайн
+                                div(style="background-image:url(images/content/steps/items/bg3.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Оплата онлайн
+                                        br
+                                        | от 10 000 руб.
+                                div(style="background-image:url(images/content/steps/items/bg4.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Получите на email
+                                        br
+                                        | доступ к платформе
+                                div(style="background-image:url(images/content/steps/items/bg5.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Изучайте ПДД
+                                        br
+                                        | по видео-урокам
+                                        br
+                                        | в своем темпе
+                                .lsteps__item.lstep
+                                    .lstep__title
+                                        | Сдайте зачет
+                                        br
+                                        | по теории
+                                    .lstep__img
+                                        +image('images/content/steps/items/img6.jpg')
+                                    .lstep__question Можно ли обгонять?
+                                    .lstep__answer
+                                        .lstep__answer-val а) Да
+                                        .lstep__answer-val б) Нет
+                                div(style="background-image:url(images/content/steps/items/bg7.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Приступайте
+                                        br
+                                        | к практическим
+                                        br
+                                        | занатиям
+                                div(style="background-image:url(images/content/steps/items/bg8.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Сдаете внутренний
+                                        br
+                                        | экзамен по практике
+                                div(style="background-image:url(images/content/steps/items/bg9.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Подготовка документов
+                                        br
+                                        | для экзамена в ГИБДД и
+                                        br
+                                        | собственно сам экзамен
+                                div(style="background-image:url(images/content/steps/items/bg10.png);").lsteps__item.lstep
+                                    .lstep__title
+                                        | Получите водительское
+                                        br
+                                        | удостоверение на вождение
+                                        br
+                                        | транспортного средства
+        //- tarrifs
+        section.landing__tarrifs
+            .ltarrifs
+                .container
+                    .ltarrifs__top
+                        h2.ltarrifs__title.
+                            Тарифы на <br> обучение
+                        .ltarrifs__txt В каждый пакет услуг входит необходимое: от теории и практики до оформления документов для ГИБДД. Никаких подводных камней, скрытых платежей или несогласованностей – предусмотрели простую, понятную схему проведения курсов, расчета. Представленное разнообразие пакетов услуг отличается количеством часов практических занятий и ценой обучения вождению автомобиля.
+
+                    .ltarrifs__list
+                        each i in tarrifsList
+                            div(class=i.cls).ltarrifs__item.ltarrif
+                                .ltarrif__title
+                                    .ltarrif__title-title Тариф
+                                    .ltarrif__title-name= i.name
+                                .ltarrif__count
+                                    .ltarrif__count-val= i.val
+                                    .ltarrif__count-diagram
+                                        div(style="border-color:" + i.bdc + ";").ltarrif__count-line
+                                .ltarrif__hours
+                                    .ltarrif__hours-val часов
+                                    .ltarrif__hours-name практики
+                                .ltarrif__prices
+                                    .ltarrif__price
+                                        .ltarrif__price-name МКПП (механика)
+                                        .ltarrif__price-val= i.price1
+                                    .ltarrif__price
+                                        .ltarrif__price-name АКПП (автомат)
+                                        .ltarrif__price-val= i.price2
+                                button(type='button').ltarrif__btn Записаться
+        //- revs
+        section.landing__revs
+            .lrevs
+                .container
+                    h2.lrevs__title
+                        | Что говорят
+                        br
+                        | о нас&nbsp;
+                        span.color-red выпускники
+                    .lrevs__slider
+                        each i in revsList
+                            .lrevs__slide
+                                .lrev
+                                    .lrev__left
+                                        a(href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" data-fancybox).lrev__fancy
+                                            button(type='button').lrev__btn
+                                                <svg width="74" height="74" viewBox="0 0 74 74" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <circle cx="36.9686" cy="36.7378" r="35.707" stroke="#CC002D" stroke-width="2"/>
+                                                <circle cx="36.9685" cy="36.7375" r="29.1326" fill="white" fill-opacity="0.5"/>
+                                                <circle cx="36.9685" cy="36.7368" r="21.5581" fill="#CC002D"/>
+                                                <path d="M43.3777 36.7374L32.89 42.7925L32.89 30.6823L43.3777 36.7374Z" fill="white"/>
+                                                </svg>
+                                            +image(i.img)
+                                    .lrev__right
+                                        .lrev__name= i.name
+                                        .lrev__txt= i.txt
+                    .lrevs__nav
+                        .lrevs__arrs
+                            a(href="#").lrevs__arr.lrevs__prev
+                                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15.41 7.41L14 6L8 12L14 18L15.41 16.59L10.83 12L15.41 7.41Z" />
+                                </svg>
+                            a(href="#").lrevs__arr.lrevs__next
+                                <svg width="24" height="24" viewBox="0 0 24 24"  xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 6L8.59003 7.41L13.17 12L8.59003 16.59L10 18L16 12L10 6Z" />
+                                </svg>
+                        .lrevs__dots
+        //- promo
+        section.landing__promo
+            .lpromo
+                .container
+                    .lpromo__img
+                        +image('images/content/promo/img.svg')
+                    .lpromo__sub Пристегнись!
+                    h2.lpromo__title Пора получить права
+                    .lpromo__txt
+                        | Сделай первый шаг к получению своего
+                        br
+                        | водительского удостоверения
+                    .lpromo__list
+                        .lpromo__item.lpitem
+                            .lpitem__img
+                                +image('images/content/promo/1.svg')
+                            h4.lpitem__title
+                                | Получить доступ
+                                br
+                                | к видеокурсам
+                            .lpitem__txt
+                                | Получите доступ
+                                br
+                                | к видео курсам
+                            button(type='button').lpitem__btn.btn Записаться
+                        .lpromo__item.lpitem.lpitem--red
+                            .lpitem__img
+                                +image('images/content/promo/2.svg')
+                            h4.lpitem__title
+                                | Записаться
+                                br
+                                | на вебинары
+                            .lpitem__txt
+                                | Заполните форму и мы
+                                br
+                                | с вами свяжемся
+                            button(type='button').lpitem__btn.btn.btn--orange Заполнить форму
+                        .lpromo__item.lpitem
+                            .lpitem__img
+                                +image('images/content/promo/3.svg')
+                            h4.lpitem__title
+                                | Получить
+                                br
+                                | консультацию
+                            .lpitem__txt
+                                | Свяжитесь с нами
+                                br
+                                | и получите консультацию
+                            a(href="tel:+7 (495)477-16-58").lpitem__btn.btn +7 (495) 477-16-58
+
+
+
+
+
+
+
+

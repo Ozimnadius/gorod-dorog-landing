@@ -1,0 +1,145 @@
+.lonline{
+  padding: 120px 0;
+
+  &__row{
+    @include row-flex;
+    margin-bottom: 110px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+
+  &__left{
+    @include col;
+    @include size(12);
+
+    &--car{
+      align-self: center;
+    }
+  }
+
+  &__right{
+    @include col;
+    @include size(12);
+  }
+
+  &__title{
+    font-size: 48px;
+    margin-bottom: 28px;
+  }
+
+  &__ul{
+    margin-bottom: 30px;
+  }
+
+  &__li{
+    position: relative;
+    font-weight: 500;
+    padding-left: 35px;
+    margin-bottom: 9px;
+
+    &:last-child{
+      margin-bottom: 0;
+    }
+
+    &:before{
+      content: '';
+      display: block;
+      width: 10px;
+      height: 10px;
+      background-color: $btn;
+      position: absolute;
+      top: 5px;
+      left: 0;
+      transform: rotate(45deg);
+
+    }
+  }
+
+  &__img{
+    border-radius: 20px;
+    overflow: hidden;
+
+    img{
+      width: 100%;
+      display: block;
+    }
+  }
+
+  &__anim{
+    position: relative;
+    pointer-events: none;
+    transform: translate(-150px);
+  }
+
+  &__car{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(-1000px,-400px) rotate(-90deg);
+
+    img{
+      display: block;
+      max-width: none;
+    }
+  }
+
+  &__rounds{
+    img{
+      display: block;
+      max-width: none;
+    }
+  }
+
+  &__sub{
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  &__list{
+    margin-bottom: 45px;
+  }
+
+  &__item{
+    display: block;
+    color: #3d3d3d;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 25px 0;
+    border-top: 1px solid #a0a0a0;
+    @include tr;
+
+    &:last-child{
+      border-bottom: 1px solid #a0a0a0;
+    }
+
+    &:hover{
+      color: $btn;
+    }
+  }
+
+  &__link{
+    display: flex;
+    align-items: center;
+
+    color: $btn;
+    font-size: 20px;
+    font-weight: 500;
+
+    &:hover{
+      svg{
+        transform: translate(5px,-5px);
+      }
+    }
+
+    svg{
+      margin-left: 25px;
+      @include tr;
+
+      path{
+        @include tr;
+      }
+    }
+  }
+
+}

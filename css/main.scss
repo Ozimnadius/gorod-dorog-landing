@@ -1,0 +1,41 @@
+//variables
+//fonts
+$font: 'Montserrat', sans-serif;
+
+//colors
+$txt: #161a26;
+$bg: #ffffff;
+$btn: #cc002d;
+$icon: #b6b8bc;
+
+//another
+$font-size: 16px;
+$transition: 0.3s;
+
+//layout
+@import "layout/mixins";
+//@import "layout/fonts";
+@import "layout/smart-grid";
+@import "layout/adjustment";
+@import "layout/common";
+
+//sections
+@import "sections/landing";
+@import "sections/header";
+@import "sections/banner";
+@import "sections/socials";
+@import "sections/welcome";
+@import "sections/online";
+@import "sections/boost";
+@import "sections/steps";
+@import "sections/tarrifs";
+@import "sections/revs";
+@import "sections/promo";
+@import "sections/footer";
+
+
+.debug {
+  //@include debug(rgba(0,0,0,0.3), 1px solid red);
+  //z-index: 100;
+  //top: 0;
+}
