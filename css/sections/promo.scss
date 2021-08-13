@@ -1,51 +1,84 @@
-.lpromo{
+.lpromo {
   background: url(/images/content/promo/bg.jpg) center center no-repeat;
   background-size: cover;
   padding-top: 120px;
   padding-bottom: 60px;
   color: $bg;
+  @include lg-block {
+    padding-top: 100px;
+    padding-bottom: 110px;
+  }
 
-  .container{
+  .container {
     display: flex;
     flex-direction: column;
     align-items: center;
   }
 
-  &__img{
+  &__img {
     margin-bottom: 40px;
-    img{
+    @include lg-block {
+      margin-bottom: 15px;
+    }
+    @include sm-block {
+      margin-bottom: 40px;
+    }
+
+    img {
       display: block;
     }
   }
 
-  &__sub{
+  &__sub {
     font-size: 48px;
     font-weight: 700;
     margin-bottom: 25px;
+    @include lg-block {
+      margin-bottom: 10px;
+    }
+    @include sm-block {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
   }
 
-  &__title{
+  &__title {
     font-size: 64px;
     margin-bottom: 25px;
+    text-align: center;
+    @include lg-block {
+      font-size: 60px;
+    }
+    @include sm-block {
+      font-size: 28px;
+
+    }
   }
 
-  &__txt{
+  &__txt {
     text-align: center;
     font-size: 24px;
     font-weight: 500;
     margin-bottom: 80px;
+    @include sm-block {
+      font-size: 18px;
+    }
   }
 
-  &__list{
+  &__list {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
+    @include sm-block {
+      grid-template-columns: 1fr;
+      grid-gap: 15px;
+    }
   }
 }
 
-.lpitem{
-  background-color: rgba($bg,.05);
+.lpitem {
+  background-color: rgba($bg, .05);
   border-radius: 33px;
   overflow: hidden;
   padding: 60px 20px 90px 20px;
@@ -54,32 +87,79 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
+  @include lg-block {
+    padding: 35px 15px 60px 15px;
+  }
+  @include sm-block {
+    padding: 30px;
+    border-radius: 10px;
+  }
 
-  &--red{
+  &__top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 25px;
+    @include sm-block {
+      flex-direction: row;
+      margin-bottom: 15px;
+    }
+  }
+
+  &--red {
     background-color: #9a1230;
     border-radius: 10px;
   }
 
-  &__img{
+  &__img {
     margin-bottom: 23px;
+    @include lg-block {
+      width: 50px;
+      margin-bottom: 15px;
+    }
+    @include sm-block {
+      margin-bottom: 0;
+      margin-right: 15px;
+    }
   }
 
-  &__title{
+  &__title {
     font-size: 24px;
     font-weight: 600;
-    margin-bottom: 25px;
+
+    @include lg-block {
+      font-size: 18px;
+    }
+    @include sm-block{
+      text-align: left;
+    }
   }
 
-  &__txt{
+  &__txt {
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 35px;
+    @include lg-block {
+      font-size: 16px;
+    }
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
-  &__btn{
+  &__btn {
     margin-top: auto;
     width: auto;
     height: 46px;
     padding: 12px 45px;
+    @include lg-block {
+      font-size: 14px;
+      padding: 0;
+      width: 100%;
+    }
+    @include sm-block{
+      padding: 12px 30px;
+      width: auto;
+    }
   }
 }

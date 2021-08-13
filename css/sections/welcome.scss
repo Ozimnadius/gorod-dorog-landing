@@ -1,26 +1,64 @@
-.lwelcome{
-  background: $txt url("../images/content/welcome/bg.jpg") center center no-repeat;
+.lwelcome {
+  background: #161a25 url("../images/content/welcome/bg.jpg") center center no-repeat;
   background-size: cover;
   padding: 140px 0;
   color: $bg;
+  @include lg-block {
+    padding: 75px 0;
+  }
+  @include sm-block {
+    background-image: none;
+    padding: 60px 0 120px;
+  }
 
-  &__top{
+  &__top {
     @include row-flex;
+    @include lg-block {
+      gap: 70px;
+    }
+    @include sm-block {
+      gap: 40px;
+    }
 
-    &-left,&-right{
+    &-left, &-right {
       @include col;
       @include size(12);
+      @include size-lg(24);
+      @include size-sm(24);
+    }
+
+    &-right {
+      @include size-lg(19);
+      @include shift-lg(2.5);
+      @include size-sm(24);
+      @include shift-sm(0);
+      @include sm-block {
+        padding: 0 10px;
+      }
     }
   }
 
-  &__title{
+  &__title {
     font-size: 64px;
-    &--small{
-      font-size: 42px;
+    @include lg-block {
+      font-size: 54px;
+      text-align: center;
     }
+    @include sm-block {
+      font-size: 24px;
+    }
+
+    &--small {
+      font-size: 42px;
+      @include sm-block {
+        font-size: 24px;
+      }
+    }
+
+
   }
 
-  &__note{
+  &__note {
     width: 100%;
     padding: 40px 60px;
     font-size: 18px;
@@ -28,20 +66,38 @@
     border-radius: 37px;
     border: 1px dashed $btn;
     position: relative;
+    @include lg-block {
 
-    &--up{
+    }
+    @include sm-block {
+      font-size: 16px;
+      padding: 40px 25px 50px 40px;
+    }
+
+    &--up {
       margin-top: 45px;
       padding: 30px 45px;
       border-radius: 20px;
+      @include lg-block {
+        margin-left: 20px;
+        width: auto;
+        padding: 35px 25px 35px 50px;
+        font-size: 16px;
+      }
+      @include sm-block{
+        margin-left: 0;
+        text-align: center;
+        padding: 30px 40px;
+      }
 
 
-      &:before{
+      &:before {
         bottom: initial;
         top: -30px;
       }
     }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 60px;
@@ -52,38 +108,75 @@
       position: absolute;
       left: -30px;
       bottom: -30px;
+      @include sm-block {
+        left: 50%;
+        transform: translateX(-50%);
+      }
 
     }
   }
 
-  &__video{
+  &__video {
     margin-top: -20px;
+    @include lg-block {
+      margin-top: 30px;
+      margin-left: -20px;
+      margin-right: -20px;
+    }
+    @include sm-block {
+      margin-top: 70px;
+      margin-left: -10px;
+      margin-right: -10px;
+    }
   }
 
-  &__row{
+  &__row {
     margin-top: -45px;
     @include row-flex;
+    @include sm-block {
+      margin-top: 140px;
+    }
   }
 
-  &__bottom{
+  &__bottom {
     @include col;
     @include size(18);
     @include shift-left(6);
+    @include size-lg(24);
+    @include shift-lg(0);
   }
 
-  &__ul{
+  &__ul {
     margin-top: 80px;
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     margin-bottom: 40px;
+    @include lg-block {
+      margin-top: 55px;
+      margin-bottom: 150px;
+    }
+    @include sm-block {
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+      margin-bottom: 70px;
+    }
   }
 
-  &__li{
+  &__li {
     position: relative;
     padding-top: 100px;
+    @include lg-block {
+      text-align: center;
+      padding-top: 85px;
+    }
+    @include sm-block {
+      text-align: left;
+      padding-left: 70px;
+      padding-top: 0;
+    }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
 
@@ -93,11 +186,12 @@
       background-size: cover;
 
       position: absolute;
+      z-index: 2;
       top: 0;
       left: 0;
     }
 
-    &:after{
+    &:after {
       content: '';
       display: block;
 
@@ -107,40 +201,110 @@
       top: 19px;
       height: 1px;
       background: url("/images/icons/line.png") 0 0 repeat-x;
+      @include sm-block {
+        height: initial;
+        width: 1px;
+        background: url("/images/icons/line-v.png") 0 0 repeat-y;
+      }
     }
 
-    &-name{
+    &:nth-child(1), &:nth-child(2), &:nth-child(3) {
+      &:before {
+        @include lg-block {
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        @include sm-block {
+          left: 0;
+          transform: translateX(0);
+        }
+      }
+    }
+
+    &:nth-child(1) {
+      &:after {
+        @include lg-block {
+          left: calc(50% + 30px);
+          right: calc(-50% + 10px);
+        }
+        @include sm-block {
+          left: 19px;
+          right: initial;
+          top: 50px;
+          bottom: calc(-50% + 20px);
+        }
+      }
+    }
+
+    &:nth-child(2) {
+      &:after {
+        @include lg-block {
+          display: none;
+        }
+        @include sm-block {
+          display: block;
+          left: 19px;
+          right: initial;
+          top: 50px;
+          bottom: calc(-50% + 30px);
+        }
+      }
+    }
+
+    &:nth-child(3) {
+      &:after {
+        @include lg-block {
+          right: calc(50% + 30px);
+          left: calc(-50% + 10px);
+        }
+        @include sm-block {
+          display: none;
+        }
+      }
+    }
+
+    &-name {
       font-size: 22px;
       font-weight: 700;
       margin-bottom: 25px;
       line-height: 120%;
     }
 
-    &-txt{
+    &-txt {
       opacity: 0.8;
       font-size: 14px;
     }
 
   }
 
-  &__cols{
+  &__cols {
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 120px;
+    @include lg-block {
+      grid-gap: 20px;
+    }
+    @include sm-block {
+      grid-template-columns: 1fr;
+      grid-gap: 50px;
+    }
   }
 
-  &__sub{
+  &__sub {
     font-size: 30px;
     font-weight: 700;
     margin-bottom: 40px;
+    @include sm-block{
+      margin-bottom: 30px;
+    }
   }
 
-  &__content{
-    p{
+  &__content {
+    p {
       opacity: 0.8;
       margin-bottom: 15px;
 
-      &:last-child{
+      &:last-child {
         margin-bottom: 0;
       }
     }
@@ -148,19 +312,19 @@
 
 }
 
-.lwvideo{
+.lwvideo {
   position: relative;
   display: block;
 
-  &__img{
+  &__img {
     width: 100%;
   }
 
-  &__btn{
+  &__btn {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
 
     display: flex;
     flex-direction: column;
@@ -171,9 +335,18 @@
     font-weight: 600;
     text-align: center;
     text-transform: uppercase;
+    @include sm-block {
+      top: 145px;
+      transform: translate(-50%, 0);
+    }
 
-    svg{
+    svg {
       margin-bottom: 12px;
+      @include sm-block {
+        width: 84px;
+        height: 84px;
+        margin-bottom: 35px;
+      }
     }
   }
 }

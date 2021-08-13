@@ -1,81 +1,163 @@
-.lboost{
+.lboost {
   background-color: #f7f7f7;
   padding-top: 140px;
   padding-bottom: 110px;
+  @include lg-block {
+    padding-top: 50px;
+  }
 
 
-  &__row{
+  &__row {
     @include row-flex;
     align-items: center;
-    margin-bottom: 95px;
   }
 
-  &__left{
+  &__left {
     @include col;
     @include size(12);
+    @include size-lg(20);
+    @include shift-lg(2);
+    @include lg-block {
+      display: flex;
+      justify-content: center;
+    }
+    @include size-sm(24);
+    @include shift-sm(0);
+    @include sm-block{
+      margin-bottom: 20px;
+    }
   }
 
-  &__img{
+  &__img {
     margin-left: -85px;
+    @include lg-block {
+      margin-left: 0;
+      max-width: 579px;
+    }
 
-    img{
+    img {
       display: block;
     }
   }
 
-  &__right{
+  &__right {
     @include col;
     @include size(12);
+    @include size-lg(20);
+    @include shift-lg(2);
+    @include lg-block {
+      text-align: center;
+    }
+    @include size-sm(24);
+    @include shift-sm(0);
   }
 
-  &__title{
+  &__title {
     font-size: 48px;
     margin-bottom: 24px;
+    @include sm-block{
+      font-size: 28px;
+      margin-bottom: 35px;
+    }
   }
 
-  &__txt{
+  &__txt {
     margin-bottom: 45px;
+    @include sm-block{
+      font-size: 16px;
+    }
   }
 
-  &__items{
+  &__btn {
+    @include lg-block {
+      margin: 0 auto;
+    }
+    @include sm-block{
+      width: 260px;
+      height: 60px;
+    }
+  }
+
+  &__items {
+    @include col;
+    @include size(24);
+    margin-top: 95px;
     display: grid;
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 40px;
     margin-bottom: 40px;
+    @include size-lg(20);
+    @include shift-lg(2);
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 60px 20px;
+      margin-bottom: 90px;
+    }
+    @include size-sm(24);
+    @include shift-sm(0);
+    @include sm-block{
+      margin-top: 75px;
+      grid-template-columns: 1fr;
+      margin-bottom: 65px;
+    }
   }
 
-  &__cols{
+  &__cols {
+    @include col;
+    @include size(24);
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(2, 1fr);
     grid-gap: 20px;
+    @include lg-block{
+        grid-template-columns: 1fr;
+    }
+    @include size-lg(20);
+    @include shift-lg(2);
+    @include size-sm(24);
+    @include shift-sm(0);
+    @include sm-block{
+        grid-gap: 15px;
+    }
   }
 
-  &__content{
+  &__content {
     max-width: 480px;
+    @include lg-block{
+      max-width: 100%;
+    }
+
+    p{
+      @include sm-block{
+        font-size: 16px;
+      }
+    }
   }
 
 }
 
-.lbitem{
+.lbitem {
 
-  &__top{
+  &__top {
     display: flex;
     align-items: center;
     margin-bottom: 25px;
   }
 
-  &__img{
+  &__img {
     flex-shrink: 0;
     margin-right: 25px;
   }
 
-  &__title{
+  &__title {
     font-size: 20px;
     font-weight: 700;
 
   }
 
-  &__txt{
+  &__txt {
     font-size: 14px;
+    @include lg-block{
+      max-width: 250px;
+    }
   }
 }

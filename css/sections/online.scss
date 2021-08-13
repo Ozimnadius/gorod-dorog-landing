@@ -1,48 +1,80 @@
-.lonline{
+.lonline {
   padding: 120px 0;
 
-  &__row{
+  @include lg-block {
+    padding: 100px 0;
+  }
+  @include sm-block {
+    padding: 40px 0;
+  }
+
+  &__row {
     @include row-flex;
     margin-bottom: 110px;
-    &:last-child{
+    @include lg-block {
+      gap: 40px;
+      margin-bottom: 0px;
+    }
+    @include sm-block {
+
+    }
+
+    &:last-child {
       margin-bottom: 0;
     }
   }
 
-  &__left{
+  &__left {
     @include col;
     @include size(12);
+    @include size-lg(20);
+    @include shift-lg(2);
+    @include size-sm(24);
+    @include shift-sm(0);
 
-    &--car{
+    &--car {
       align-self: center;
+      @include lg-block {
+        order: -1;
+      }
     }
   }
 
-  &__right{
+  &__right {
     @include col;
     @include size(12);
+    @include size-lg(20);
+    @include shift-lg(2);
+    @include lg-block {
+      order: -1;
+    }
+    @include size-sm(24);
+    @include shift-sm(0);
   }
 
-  &__title{
+  &__title {
     font-size: 48px;
     margin-bottom: 28px;
+    @include sm-block {
+      font-size: 24px;
+    }
   }
 
-  &__ul{
+  &__ul {
     margin-bottom: 30px;
   }
 
-  &__li{
+  &__li {
     position: relative;
     font-weight: 500;
     padding-left: 35px;
     margin-bottom: 9px;
 
-    &:last-child{
+    &:last-child {
       margin-bottom: 0;
     }
 
-    &:before{
+    &:before {
       content: '';
       display: block;
       width: 10px;
@@ -56,51 +88,73 @@
     }
   }
 
-  &__img{
+  &__img {
     border-radius: 20px;
     overflow: hidden;
 
-    img{
+    img {
       width: 100%;
       display: block;
     }
   }
 
-  &__anim{
+  &__anim {
     position: relative;
     pointer-events: none;
     transform: translate(-150px);
+    @include lg-block {
+      transform: translate(-20px);
+      margin-bottom: -60px;
+    }
+    @include sm-block {
+      transform: none;
+      margin-bottom: -45px;
+      margin-left: -45px;
+      margin-right: -45px;
+    }
   }
 
-  &__car{
+  &__car {
     position: absolute;
     top: 0;
     left: 0;
-    transform: translate(-1000px,-400px) rotate(-90deg);
+    transform: translate(-1000px, -400px) rotate(-90deg);
+    @include lg-block {
+      transform: none;
+    }
 
-    img{
+    img {
       display: block;
       max-width: none;
+      @include sm-block {
+        max-width: 100%;
+      }
     }
   }
 
-  &__rounds{
-    img{
+  &__rounds {
+    img {
       display: block;
       max-width: none;
+      @include sm-block {
+        max-width: 100%;
+      }
     }
   }
 
-  &__sub{
+  &__sub {
     font-size: 36px;
     margin-bottom: 40px;
+    @include sm-block{
+      font-size: 28px;
+    }
   }
 
-  &__list{
+  &__list {
     margin-bottom: 45px;
   }
 
-  &__item{
+  &__item {
     display: block;
     color: #3d3d3d;
     font-size: 20px;
@@ -108,35 +162,47 @@
     padding: 25px 0;
     border-top: 1px solid #a0a0a0;
     @include tr;
+    @include sm-block{
+      font-size: 14px;
+      padding: 17px 0;
+    }
 
-    &:last-child{
+    &:last-child {
       border-bottom: 1px solid #a0a0a0;
     }
 
-    &:hover{
+    &:hover {
       color: $btn;
     }
   }
 
-  &__link{
+  &__link {
     display: flex;
     align-items: center;
 
     color: $btn;
     font-size: 20px;
     font-weight: 500;
+    @include sm-block{
+      font-size: 16px;
+    }
 
-    &:hover{
-      svg{
-        transform: translate(5px,-5px);
+    &:hover {
+      svg {
+        transform: translate(5px, -5px);
       }
     }
 
-    svg{
+    svg {
       margin-left: 25px;
       @include tr;
+      @include sm-block{
+        width: 20px;
+        height: 20px;
+        margin-left: 15px;
+      }
 
-      path{
+      path {
         @include tr;
       }
     }

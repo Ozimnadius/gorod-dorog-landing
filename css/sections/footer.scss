@@ -2,36 +2,53 @@
   background-color: #161a25;
   padding-top: 60px;
   color: $bg;
+  @include lg-block {
+    padding-top: 15px;
+  }
 
-  &__top{
+  &__top {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-template-areas: 'logo txt txt' 'contacts menu menu';
     grid-gap: 70px 20px;
     margin-bottom: 85px;
+
+    @include lg-block {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-areas: 'logo logo'
+                          'contacts contacts'
+                          'txt txt'
+                          'menu menu';
+    }
+    @include sm-block{
+      grid-gap: 50px 20px;
+    }
   }
 
-  &__logo{
+  &__logo {
     grid-area: logo;
-    a{
+
+    a {
       display: block;
     }
-    img{
+
+    img {
       display: block;
     }
   }
 
-  &__txt{
+  &__txt {
     grid-area: txt;
     align-self: flex-end;
-    p{
+
+    p {
       max-width: 600px;
       opacity: .5;
       font-size: 18px;
     }
   }
 
-  &__contacts{
+  &__contacts {
     grid-area: contacts;
 
     display: flex;
@@ -39,49 +56,94 @@
     align-items: flex-start;
   }
 
-  &__tel{
+  &__tel {
     color: #ef002a;
     font-size: 30px;
     font-weight: 600;
     margin-bottom: 10px;
   }
 
-  &__contact{
+  &__contact {
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 2.02px;
   }
 
-  &__mail{
+  &__mail {
     margin-bottom: 5px;
+    @include tr;
+
+    &:hover {
+      color: $btn;
+    }
   }
 
-  &__time{
+  &__time {
     margin-bottom: 25px;
   }
 
-  &__menu{
+  &__menu {
     grid-area: menu;
   }
 
-  &__bottom{
-    border-top: 1px solid rgba($bg,.2);
+  &__cols {
+    display: grid;
+    grid-template-columns: repeat(3, 50%);
+    grid-gap: 20px;
+    @include sm-block{
+      grid-template-columns: repeat(2, 50%);
+      grid-gap: 80px 20px;
+    }
+  }
+
+  &__col {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: -8px;
+  }
+
+  &__item {
+    padding: 8px 0;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 2.02px;
+    text-transform: uppercase;
+    @include tr;
+
+    &:hover {
+      color: $btn;
+    }
+  }
+
+  &__bottom {
+    border-top: 1px solid rgba($bg, .2);
     padding: 20px 0;
   }
 
-  &__copy{
+  &__copy {
     font-size: 14px;
     font-weight: 500;
     text-transform: uppercase;
   }
 }
 
-.lfsocials{
+.lfsocials {
   display: flex;
   margin: 0 -9px;
 
-  &__item{
+  &__item {
     margin: 0 9px;
+
+    path {
+      @include tr;
+    }
+
+    &:hover {
+      path {
+        fill: $btn;
+      }
+    }
   }
 }

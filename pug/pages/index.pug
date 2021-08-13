@@ -55,7 +55,9 @@ block content
                     .lwelcome__top
                         .lwelcome__top-left
                             h2.lwelcome__title.lwelcome__title--small
-                                | Добро пожаловать в Онлайн Автошколу
+                                | Добро пожаловать
+                                br
+                                |в Онлайн Автошколу
                                 br
                                 span.color-red Город - Дорог
                         .lwelcome__top-right
@@ -82,11 +84,8 @@ block content
                                 | презентацию
                     .lwelcome__row
                         .lwelcome__bottom
-                            h2.lwelcome__title
-                                | Почему выбирают
-                                br
-                                | Город - Дорог
-                                span.color-red онлайн
+                            h2.lwelcome__title.
+                                Почему выбирают <br> Город - Дорог <span class="color-red">онлайн</span>
                             ul.lwelcome__ul
                                 li.lwelcome__li
                                     .lwelcome__li-name
@@ -169,29 +168,27 @@ block content
                             .lboost__img
                                 +image('images/content/boost/img.png')
                         .lboost__right
-                            h2.lboost__title
-                                | Ускорьте своё обучение с помощью&nbsp;
-                                br
-                                span.color-red вебинаров
+                            h2.lboost__title.
+                                Ускорьте своё обучение с помощью <span class="color-red">вебинаров</span>
                             .lboost__txt Ускорьте свое обучение участвуя на вебинарах. Живое общение с профессиональными инструкторами поможет вам лучше и быстрее понять теорию и сдать экзамены на отлично
                             button(type='button').lboost__btn.btn Ускорить обучение
-                    .lboost__items
-                        each i in boostList
-                            .lboost__item.lbitem
-                                .lbitem__top
-                                    .lbitem__img
-                                        +image(i.img)
-                                    .lbitem__title= i.title
-                                .lbitem__bottom
-                                    .lbitem__txt= i.txt
+                        .lboost__items
+                            each i in boostList
+                                .lboost__item.lbitem
+                                    .lbitem__top
+                                        .lbitem__img
+                                            +image(i.img)
+                                        .lbitem__title!=i.title
+                                    .lbitem__bottom
+                                        .lbitem__txt= i.txt
 
-                    .lboost__cols
-                        .lboost__col
-                            .lboost__content
-                                p Благодаря формату видеовстреч можно в режиме реального времени слушать тренера, общаться с известными экспертами или обсуждать важные вопросы с коллегами. При этом вы никого не вынуждаете покидать свой дом, тратить время на дорогу и везти весь необходимый инвентарь.
-                        .lboost__col
-                            .lboost__content
-                                p Во время трансляции каждый участник может находиться на своем рабочем месте, делать скриншоты, вести запись экрана и помечать те моменты, к которым он хотел бы вернуться. Не нужно стараться успевать записывать речь эксперта в тетради на коленке, как это происходит обычно. Как правило, после вебинара слушатели получают на почту все необходимые файлы с материалом.
+                        .lboost__cols
+                            .lboost__col
+                                .lboost__content
+                                    p Благодаря формату видеовстреч можно в режиме реального времени слушать тренера, общаться с известными экспертами или обсуждать важные вопросы с коллегами. При этом вы никого не вынуждаете покидать свой дом, тратить время на дорогу и везти весь необходимый инвентарь.
+                            .lboost__col
+                                .lboost__content
+                                    p Во время трансляции каждый участник может находиться на своем рабочем месте, делать скриншоты, вести запись экрана и помечать те моменты, к которым он хотел бы вернуться. Не нужно стараться успевать записывать речь эксперта в тетради на коленке, как это происходит обычно. Как правило, после вебинара слушатели получают на почту все необходимые файлы с материалом.
         //- steps
         section.landing__steps
             .lsteps
@@ -204,7 +201,10 @@ block content
                             br
                             | удостоверения
                         .lsteps__img
-                            +image('images/content/steps/img.png')
+                            picture
+                                source(srcset='images/content/steps/img.png' type='image/jpeg' media='(min-width:768px)')
+                                source(srcset='images/content/steps/img-m.png' type='image/jpeg' media='(min-width:320px)')
+                                img(src='images/content/steps/img.png' alt='lorem1')
                     .lsteps__wrap
                         .lsteps__road
                             .lsteps__car
@@ -293,7 +293,7 @@ block content
                                 .ltarrif__count
                                     .ltarrif__count-val= i.val
                                     .ltarrif__count-diagram
-                                        div(style="border-color:" + i.bdc + ";").ltarrif__count-line
+                                        div(style="border-color:" + i.bdc + "; transform: rotate("+i.val/56*180+"deg);").ltarrif__count-line
                                 .ltarrif__hours
                                     .ltarrif__hours-val часов
                                     .ltarrif__hours-name практики
@@ -356,36 +356,39 @@ block content
                         | водительского удостоверения
                     .lpromo__list
                         .lpromo__item.lpitem
-                            .lpitem__img
-                                +image('images/content/promo/1.svg')
-                            h4.lpitem__title
-                                | Получить доступ
-                                br
-                                | к видеокурсам
+                            .lpitem__top
+                                .lpitem__img
+                                    +image('images/content/promo/1.svg')
+                                h4.lpitem__title
+                                    | Получить доступ
+                                    br
+                                    | к видеокурсам
                             .lpitem__txt
                                 | Получите доступ
                                 br
                                 | к видео курсам
                             button(type='button').lpitem__btn.btn Записаться
                         .lpromo__item.lpitem.lpitem--red
-                            .lpitem__img
-                                +image('images/content/promo/2.svg')
-                            h4.lpitem__title
-                                | Записаться
-                                br
-                                | на вебинары
+                            .lpitem__top
+                                .lpitem__img
+                                    +image('images/content/promo/2.svg')
+                                h4.lpitem__title
+                                    | Записаться
+                                    br
+                                    | на вебинары
                             .lpitem__txt
                                 | Заполните форму и мы
                                 br
                                 | с вами свяжемся
                             button(type='button').lpitem__btn.btn.btn--orange Заполнить форму
                         .lpromo__item.lpitem
-                            .lpitem__img
-                                +image('images/content/promo/3.svg')
-                            h4.lpitem__title
-                                | Получить
-                                br
-                                | консультацию
+                            .lpitem__top
+                                .lpitem__img
+                                    +image('images/content/promo/3.svg')
+                                h4.lpitem__title
+                                    | Получить
+                                    br
+                                    | консультацию
                             .lpitem__txt
                                 | Свяжитесь с нами
                                 br

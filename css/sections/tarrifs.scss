@@ -2,22 +2,58 @@
   background-color: #f7f7f7;
   padding-top: 180px;
   padding-bottom: 120px;
+  @include lg-block{
+    padding-top: 130px;
+    padding-bottom: 190px;
+  }
+  @include sm-block{
+    padding: 60px 0;
+
+  }
+
+  .container{
+    @include lg-block{
+      padding: 0 50px;
+    }
+    @include sm-block{
+      padding: 0 10px;
+    }
+  }
 
   &__top {
     display: flex;
     margin-bottom: 50px;
+    @include lg-block{
+        flex-direction: column;
+    }
   }
 
   &__title {
     font-size: 48px;
     margin-right: 70px;
     white-space: nowrap;
+    @include lg-block{
+      margin-right: 0;
+      margin-bottom: 45px;
+    }
+    @include sm-block{
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
   }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin-bottom: -70px;
+  }
+
+  &__item{
+    margin-bottom: 70px;
+    @include sm-block{
+      margin-right: 15px;
+    }
   }
 }
 
@@ -27,7 +63,7 @@
   border-radius: 10px;
   background: $bg;
   overflow: hidden;
-  display: flex;
+  display: flex!important;
   flex-direction: column;
   align-items: center;
   text-align: center;
@@ -213,6 +249,7 @@
     color: #ff1e48;
     font-size: 16px;
     font-weight: 500;
+    margin: 0 auto;
     @include tr;
 
     &:hover{

@@ -1,59 +1,78 @@
-.lrevs{
+.lrevs {
   padding-top: 130px;
   padding-bottom: 160px;
+  @include sm-block {
+    background-color: #f7f7f7;
+    padding-top: 10px;
+    padding-bottom: 90px;
+  }
 
-  &__title{
+  &__title {
     font-size: 48px;
     margin-bottom: 80px;
+    @include sm-block {
+      font-size: 28px;
+      margin-bottom: 40px;
+    }
   }
 
-  &__slider{
-    margin-right: -25px;
+  &__slider {
     margin-right: -395px;
     margin-bottom: 80px;
+    @include sm-block{
+      margin-right: -10px;
+      margin-bottom: 0;
+    }
   }
 
-  &__slide{
+  &__slide {
     margin: 0 25px;
+    @include sm-block{
+      margin: 0 5px;
+    }
   }
 
-  &__nav{
+  &__nav {
     display: flex;
     flex-direction: column;
+    @include sm-block{
+      display: none;
+    }
   }
 
-  &__arrs{
+  &__arrs {
     align-self: flex-end;
     display: flex;
     align-items: center;
     margin-bottom: 12px;
   }
 
-  &__arr{
+  &__arr {
     margin-right: 20px;
     fill: #d0d0d0;
     @include tr;
 
-    &:last-child{
+    &:last-child {
       margin-right: 0;
     }
 
-    &:hover{
+    &:hover {
       fill: $btn;
     }
-    svg{
+
+    svg {
 
     }
   }
 
-  &__dots{
+  &__dots {
     width: 100%;
 
-    .slick-dots{
+    .slick-dots {
       width: 100%;
       display: flex;
 
-      li{
+      li {
         //width: 100%;
         //max-width: 100px;
         flex-grow: 1;
@@ -64,7 +83,7 @@
         font-size: 0;
         @include tr;
 
-        &.slick-active{
+        &.slick-active {
           border-color: $btn;
           background: $btn;
         }
@@ -72,22 +91,24 @@
     }
   }
 
-
 }
 
-.lrev{
+.lrev {
   display: grid;
   grid-template-columns: 247px 385px;
   grid-gap: 25px;
+  @include sm-block {
+    grid-template-columns: 216px;
+  }
 
-  &__fancy{
+  &__fancy {
     display: block;
     border-radius: 20px;
     overflow: hidden;
     position: relative;
-    padding-top: calc(356/247*100%);
+    padding-top: calc(356 / 247 * 100%);
 
-    img{
+    img {
       display: block;
       position: absolute;
       z-index: 1;
@@ -99,30 +120,31 @@
     }
   }
 
-  &__btn{
+  &__btn {
     position: absolute;
     z-index: 2;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 
-
-
-  &__right{
+  &__right {
     border-radius: 20px;
     border: 1px solid #d9d9d9;
     padding: 50px 40px;
     overflow: hidden;
+    @include sm-block {
+      display: none;
+    }
   }
 
-  &__name{
+  &__name {
     font-size: 14px;
     font-weight: 600;
     margin-bottom: 30px;
   }
 
-  &__txt{
+  &__txt {
     font-size: 14px;
   }
 }

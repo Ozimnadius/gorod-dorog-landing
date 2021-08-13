@@ -1,5 +1,8 @@
 .lsteps {
   padding: 160px 0;
+  @include sm-block{
+    padding: 75px 0;
+  }
 
   &__banner {
     background: url("/images/content/steps/bg.png") center center no-repeat;
@@ -7,19 +10,45 @@
     padding: 65px 70px;
     position: relative;
     margin-bottom: 60px;
+    border-radius: 20px;
+    @include lg-block{
+      padding-bottom: 0;
+      background-image: url("/images/content/steps/bg-t.png");
+    }
+    @include sm-block{
+      padding: 0;
+      padding-top: 50px;
+    }
+
   }
 
   &__title {
     font-size: 48px;
+    @include lg-block{
+      margin-bottom: 10px;
+    }
+    @include sm-block{
+      font-size: 30px;
+      margin: 0 30px 30px;
+    }
   }
 
   &__img {
     position: absolute;
     bottom: 0;
     right: -33px;
+    @include lg-block{
+      position: static;
+      margin-left: -20px;
+      margin-right: -20px;
+      @include sm-block{
+        margin: 0;
+      }
+    }
 
     img {
       display: block;
+
     }
   }
 
@@ -38,26 +67,51 @@
     position: absolute;
     top: 20px;
     left: 235px;
+    @include lg-block{
+      left: 265px;
+    }
+    @include sm-block{
+      left: 30px;
+    }
   }
 
   &__items {
     display: flex;
     flex-wrap: wrap;
-    //justify-content: space-between;
+    justify-content: center;
     margin-bottom: -60px;
     counter-reset: item;
     margin-left: -35px;
     margin-right: -35px;
     position: relative;
-    @media (max-width: 1199.98px){
-      width: 930px;
+    @include lg-block{
+      margin-left: -65px;
+      margin-right: -65px;
+      width: 740px;
     }
+    @include sm-block{
+      width: 355px;
+      margin-left: 0;
+      margin-right: 0;
+      justify-content: flex-end;
+      margin-bottom: -50px;
+    }
+
   }
 
   &__item {
     margin-bottom: 60px;
     margin-left: 35px;
     margin-right: 35px;
+    @include lg-block{
+      margin-left: 65px;
+      margin-right: 65px;
+    }
+    @include sm-block{
+      margin-left: 0;
+      margin-right: 0;
+      margin-bottom: 50px;
+    }
   }
 }
 
