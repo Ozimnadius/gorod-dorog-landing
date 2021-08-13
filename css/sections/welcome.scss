@@ -13,6 +13,7 @@
 
   &__top {
     @include row-flex;
+    align-items: center;
     @include lg-block {
       gap: 70px;
     }

@@ -57,6 +57,12 @@ body {
   padding-left: 20px;
   padding-right: 20px;
 }
+@media screen and (max-width: 1919.98px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
 @media screen and (max-width: 1199.98px) {
   .container {
     padding-left: 20px;
@@ -253,7 +259,7 @@ input, textarea {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 40px 115px 0;
+  padding: 40px 110px 0;
 }
 @media screen and (max-width: 1199.98px) {
   .lheader {
@@ -378,17 +384,17 @@ input, textarea {
 }
 .lbanner__socials {
   position: absolute;
-  left: 115px;
+  left: 110px;
   top: 220px;
 }
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 1919.98px) {
   .lbanner__socials {
     display: none;
   }
 }
 .lbanner .container {
-  min-height: 864px;
-  padding-top: 108px;
+  min-height: 855px;
+  padding-top: 127px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -644,8 +650,8 @@ input, textarea {
 }
 .lbanner__mail {
   position: absolute;
-  top: 245px;
-  right: 115px;
+  top: 235px;
+  right: 110px;
   -webkit-writing-mode: vertical-rl;
       -ms-writing-mode: tb-rl;
           writing-mode: vertical-rl;
@@ -656,11 +662,12 @@ input, textarea {
   font-size: 13px;
   font-weight: 600;
   text-transform: uppercase;
+  letter-spacing: 2.02px;
   -webkit-transition: 0.3s;
   -o-transition: 0.3s;
   transition: 0.3s;
 }
-@media screen and (max-width: 1199.98px) {
+@media screen and (max-width: 1919.98px) {
   .lbanner__mail {
     display: none;
   }
@@ -684,7 +691,7 @@ input, textarea {
 .lsocials__list {
   display: -ms-grid;
   display: grid;
-  grid-gap: 30px;
+  grid-gap: 24px;
   margin-bottom: 45px;
 }
 .lsocials__item {
@@ -740,6 +747,9 @@ input, textarea {
       flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media screen and (max-width: 767.98px) {
   .lwelcome__top {
@@ -1229,7 +1239,7 @@ input, textarea {
       flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
-  margin-bottom: 110px;
+  margin-bottom: 90px;
 }
 @media screen and (max-width: 767.98px) {
   .lonline__row {
@@ -2977,8 +2987,8 @@ input, textarea {
 .lfooter__cols {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 50% 20px 50% 20px 50%;
-  grid-template-columns: repeat(3, 50%);
+  -ms-grid-columns: 1fr 20px 1fr 20px 1fr;
+  grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 @media screen and (max-width: 767.98px) {

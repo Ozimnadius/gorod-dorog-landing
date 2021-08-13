@@ -89,7 +89,7 @@
 
   &__cols {
     display: grid;
-    grid-template-columns: repeat(3, 50%);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     @include sm-block{
       grid-template-columns: repeat(2, 50%);

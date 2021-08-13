@@ -5,16 +5,16 @@
 
   &__socials{
     position: absolute;
-    left: 115px;
+    left: 110px;
     top: 220px;
-    @include lg-block{
+    @include xlg-block{
       display: none;
     }
   }
 
   .container{
-    min-height: 864px;
-    padding-top: 108px;
+    min-height: 855px;
+    padding-top: 127px;
     display: flex;
     align-items: center;
     @media (max-width: 1199.98px){
@@ -166,8 +166,8 @@
 
   &__mail{
     position: absolute;
-    top: 245px;
-    right: 115px;
+    top: 235px;
+    right: 110px;
 
     writing-mode: vertical-rl;
     transform: rotate(180deg);
@@ -176,9 +176,10 @@
     font-size: 13px;
     font-weight: 600;
     text-transform: uppercase;
+    letter-spacing: 2.02px;
     @include tr;
 
-    @include lg-block{
+    @include xlg-block{
       display: none;
     }
 

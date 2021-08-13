@@ -71,7 +71,7 @@ window.addEventListener('load', function (e) {
         });
     }
 
-    if (document.querySelector('.ltarrifs') && window.innerWidth>768) {
+    if (document.querySelector('.ltarrifs') && window.innerWidth>=768) {
 
         $('.ltarrif').each(function (i) {
             ScrollTrigger.create({
